@@ -123,6 +123,23 @@ nav > * {
     width: 4em;
 }
 
+#buttons  {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 30px;
+}
+
+#header #buttons button {
+    background-color: var(---accent-color1);
+    color: var(---foreground-color);
+    font-size: 1em;
+    font-weight: bolder;
+    height: 2em;
+    border-radius: 50px;
+    border: none;
+}
+
 
 #main-content {
     display: grid;
