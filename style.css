@@ -18,15 +18,45 @@ body {
     grid-template-columns: 1fr 4fr;
 }
 
-#sidebar {
-    display: grid;
+nav {
     grid-column: 1 / 2;
     grid-row: 1 / 5;
     background-color: var(---accent-color1);
+    display: grid;
+    gap: 20px;
+    grid-template-rows: 1fr 3fr 6fr;
+    font-size: 1.5em;
+    color: var(---foreground-color);
 }
 
-#sidebar > * {
+#branding,
+li {
+    display: grid;
+    grid-template-columns: 1.5em 1fr;
+    gap: 10px;
+    align-items: center;
+}
+
+nav ul {
+    display: grid;
+    gap: 10px
+}
+
+li {
+    list-style: none;
+}
+
+li > img {
+    width: 1.5em;
+}
+
+#branding > img {
+    width: 2em;
+}
+
+nav > * {
     border: dashed 2px white;
+    padding-left: 20px;
 }
 
 #header {
@@ -47,4 +77,10 @@ body {
 
 #main-content > * {
     border: dashed 2px white;
+}
+
+
+
+.filter-white {
+    filter: invert(100%);
 }
