@@ -111,37 +111,18 @@ nav > * {
     border-radius: 50px;
 }
 
-/* #header-top {
+#greetings {
     display: grid;
-    grid-row: 1 / 2;
-    grid-template-columns: 2em auto 2em 2em auto;
+    grid-template-columns: auto 1fr;
     gap: 10px;
-    justify-content: stretch;
     align-items: center;
-    padding-left: 30px;
-    padding-right: 30px;
-}  */
-
-#header-top > * {
-    border: dotted 2px green;
 }
 
-#header-top input {
-    height: 1.5em;
-    background-color: var(---background-color);
-    border-radius: 20px;
+#greetings > #pfp {
+    height: 4em;
+    width: 4em;
 }
 
-#pfp-container img {
-    height: 3em;
-    width: 3em;
-    background-color: orange;
-}
-
-#header-bottom {
-    display: grid;
-    grid-row: 2 / 3;
-}
 
 #main-content {
     display: grid;
