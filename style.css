@@ -15,7 +15,7 @@ body {
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 4fr;
 }
 
 nav {
@@ -63,23 +63,58 @@ nav > * {
 #header {
     display: grid;
     grid-row: 1 / 2;
-    background-color: var(---foreground-color);
+    grid-column: 2 / 3;
+    grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
+    padding: 10px 40px;
+    gap: 10px;
+    background-color: var(---foreground-color);
+    border: dashed 2px grey;
 }
 
 #header > * {
     border: dashed 2px grey;
 }
 
-#header-top {
+#header > #search {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 10px;
+}
+
+#header > #search img {
+    height: 2em;
+}
+
+#header > #search input {
+    border: none;
+    border-radius: 30px;
+    background-color: var(---background-color);
+    height: 1em;
+    width: 50em;
+    padding: 10px;
+}
+
+/* #header-top {
     display: grid;
     grid-row: 1 / 2;
     grid-template-columns: 2em auto 2em 2em auto;
     gap: 10px;
+    justify-content: stretch;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+}  */
+
+#header-top > * {
+    border: dotted 2px green;
 }
 
 #header-top input {
     height: 1.5em;
+    background-color: var(---background-color);
+    border-radius: 20px;
 }
 
 #pfp-container img {
