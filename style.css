@@ -64,7 +64,7 @@ nav > * {
     display: grid;
     grid-row: 1 / 2;
     grid-column: 2 / 3;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr;
     padding: 10px 40px;
     gap: 10px;
@@ -83,7 +83,8 @@ nav > * {
     gap: 10px;
 }
 
-#header > #search img {
+#header > #search img,
+#header #notification > img {
     height: 2em;
 }
 
@@ -94,6 +95,20 @@ nav > * {
     height: 1em;
     width: 50em;
     padding: 10px;
+}
+
+#user-profile {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    align-items: center;
+    justify-items: center;
+}
+
+#pfp {
+    background-color: orange;
+    height: 3em;
+    width: 3em;
+    border-radius: 50px;
 }
 
 /* #header-top {
