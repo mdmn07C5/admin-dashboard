@@ -1,0 +1,50 @@
+:root {
+    font-family: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
+    ---background-color: lightgray;
+    ---foreground-color: white;
+    ---accent-color1: skyblue;
+    ---accent-color2: gold;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 4fr;
+}
+
+#sidebar {
+    display: grid;
+    grid-column: 1 / 2;
+    grid-row: 1 / 5;
+    background-color: var(---accent-color1);
+}
+
+#sidebar > * {
+    border: dashed 2px white;
+}
+
+#header {
+    display: grid;
+    grid-row: 1 / 2;
+    background-color: var(---foreground-color);
+}
+
+#header > * {
+    border: dashed 2px grey;
+}
+
+#main-content {
+    display: grid;
+    grid-row: 2 / 5;
+    background-color: var(---background-color);
+}
+
+#main-content > * {
+    border: dashed 2px white;
+}
