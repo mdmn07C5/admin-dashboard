@@ -115,17 +115,17 @@ function generateTrends() {
             subtitle: 'World Peace Builder',
         },
         {
-            color: '#E0F2FE',
+            color: '#FACC15',
             handle: '@morgan', 
             subtitle: 'Super Cool Project',
         },
         {
-            color: '#E0F2FE',
+            color: '#A3A3A3',
             handle: '@kendall', 
             subtitle: 'Life Changing App',
         },
         {
-            color: '#E0F2FE',
+            color: '#FDA4AF',
             handle: '@alex', 
             subtitle: 'No Traffic Maker',
         },

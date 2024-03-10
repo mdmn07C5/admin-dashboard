@@ -118,7 +118,8 @@ nav > * {
     align-items: center;
 }
 
-#greetings > #pfp {
+#greetings > #pfp,
+.pfp {
     height: 4em;
     width: 4em;
 }
@@ -209,12 +210,14 @@ nav > * {
     border: 1px dashed slateblue;
 }
 
-#announcements {
+#announcements, 
+#trending {
     display: flex;
     flex-direction: column;
 }
 
-#announcements-container {
+#announcements-container,
+#trends-container {
     background-color: var(---foreground-color);
     box-shadow: 2px 5px 5px 0px rgba(0, 0, 0, 0.3);
     padding: 30px;
@@ -227,6 +230,30 @@ nav > * {
     flex-grow: 1;
 }
 
+#trends-container {
+    gap: 5px;
+}
+
+.trend {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 5px;
+}
+
+.trend > * {
+    border: 1px dashed purple;
+}
+
+.trend > .pfp {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    border-radius: 50%;
+}
+
+.trend > h3 {
+    align-self: end;
+}
 
 #main-content > * {
     border: dashed 2px white;
