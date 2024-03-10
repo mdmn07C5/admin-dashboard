@@ -1,9 +1,9 @@
 :root {
     font-family: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
-    ---background-color: lightgray;
+    ---background-color: #e2e8f0;
     ---foreground-color: white;
-    ---accent-color1: skyblue;
-    ---accent-color2: gold;
+    ---accent-color1: #1992d4;
+    ---accent-color2: #f0b429;
 }
 
 * {

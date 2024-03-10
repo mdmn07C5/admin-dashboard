@@ -106,6 +106,56 @@ function generateAnnouncements() {
     console.log(announcementsContainer.children);
 }
 
+function generateTrends() {
+    const announcementsContainer = document.querySelector('#trends-container');
+    const trends = [
+        {
+            color: '#E0F2FE',
+            handle: '@tegan', 
+            subtitle: 'World Peace Builder',
+        },
+        {
+            color: '#E0F2FE',
+            handle: '@morgan', 
+            subtitle: 'Super Cool Project',
+        },
+        {
+            color: '#E0F2FE',
+            handle: '@kendall', 
+            subtitle: 'Life Changing App',
+        },
+        {
+            color: '#E0F2FE',
+            handle: '@alex', 
+            subtitle: 'No Traffic Maker',
+        },
+    ]
+
+
+    trends.forEach((trend) => {
+        const trendContainer = document.createElement('div')
+        trendContainer.classList = 'trend'
+
+        const pfp = document.createElement('div')
+        pfp.classList = 'pfp'
+        pfp.style.backgroundColor = trend.color;
+        trendContainer.appendChild(pfp)
+
+        const handle = document.createElement('h3');
+        handle.innerHTML = trend.handle;
+        trendContainer.appendChild(handle);
+
+        const sub = document.createElement('p');
+        sub.innerHTML = trend.subtitle;
+        trendContainer.appendChild(sub);
+        
+        announcementsContainer.appendChild(trendContainer);
+    })
+
+
+}
+
+
 generateProjectContent();
 generateAnnouncements();
-
+generateTrends();
