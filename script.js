@@ -62,7 +62,7 @@ function createButtonRow() {
 }
 
 function generateProjectContent() {
-    const projects = document.querySelector('#projects');
+    const projectsContainer = document.querySelector('#projects-container');
     
     titles.forEach((title) => {
         const card = document.createElement('div');
@@ -70,7 +70,7 @@ function generateProjectContent() {
 
         card.appendChild(createContentText(title));
         card.appendChild(createButtonRow());
-        projects.appendChild(card);
+        projectsContainer.appendChild(card);
     })
 }
 
