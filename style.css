@@ -209,6 +209,25 @@ nav > * {
     border: 1px dashed slateblue;
 }
 
+#announcements {
+    display: flex;
+    flex-direction: column;
+}
+
+#announcements-container {
+    background-color: var(---foreground-color);
+    box-shadow: 2px 5px 5px 0px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    border-radius: 10px;
+    font-size: 0.8em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+
 #main-content > * {
     border: dashed 2px white;
 }

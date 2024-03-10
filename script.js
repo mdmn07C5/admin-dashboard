@@ -14,6 +14,13 @@ const titles = [
     'Money Maker',
 ];
 
+const announcements = [
+    'Site Maintenance',
+    'Community Share Day',
+    'Updated Privacy Policy',
+]
+
+
 const buttonPaths = [
     './assets/fav.svg',
     './assets/watch.svg',
@@ -74,5 +81,31 @@ function generateProjectContent() {
     })
 }
 
+function generateAnnouncements() {
+    const announcementsContainer = document.querySelector('#announcements-container');
+
+    announcements.forEach((announcement, index) => {
+        const content = document.createElement('div');
+        
+        const h2 = document.createElement('h2');
+        h2.innerHTML = announcement;
+        content.appendChild(h2);
+
+        const p = document.createElement('p');
+        p.innerHTML = twoRandomElements(loremIpsum)[0];
+        content.appendChild(p);
+
+        announcementsContainer.appendChild(content);
+
+        if (index < announcements.length - 1) {
+            announcementsContainer.appendChild(document.createElement('hr'));
+        }
+
+    })
+
+    console.log(announcementsContainer.children);
+}
+
 generateProjectContent();
+generateAnnouncements();
 
