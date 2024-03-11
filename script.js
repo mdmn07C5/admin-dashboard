@@ -111,21 +111,25 @@ function generateTrends() {
     const trends = [
         {
             color: '#E0F2FE',
+            pfp: './assets/pfp/sonna.png',
             handle: '@tegan', 
             subtitle: 'World Peace Builder',
         },
         {
             color: '#FACC15',
+            pfp: './assets/pfp/tomoe.png',
             handle: '@morgan', 
             subtitle: 'Super Cool Project',
         },
         {
             color: '#A3A3A3',
+            pfp: './assets/pfp/ohaoo.png',
             handle: '@kendall', 
             subtitle: 'Life Changing App',
         },
         {
             color: '#FDA4AF',
+            pfp: './assets/pfp/socks.png',
             handle: '@alex', 
             subtitle: 'No Traffic Maker',
         },
@@ -139,6 +143,10 @@ function generateTrends() {
         const pfp = document.createElement('div')
         pfp.classList = 'pfp'
         pfp.style.backgroundColor = trend.color;
+        const pfpImg = document.createElement('img');
+        pfpImg.classList = 'pfp-img';
+        pfpImg.src = trend.pfp;
+        pfp.appendChild(pfpImg);
         trendContainer.appendChild(pfp)
 
         const handle = document.createElement('h3');
