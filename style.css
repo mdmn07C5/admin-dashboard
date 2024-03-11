@@ -34,13 +34,13 @@ nav {
 li {
     display: grid;
     grid-template-columns: 1.5em 1fr;
-    gap: 10px;
+    gap: 20px;
     align-items: center;
 }
 
 nav ul {
     display: grid;
-    gap: 10px
+    gap: 20px
 }
 
 li {
