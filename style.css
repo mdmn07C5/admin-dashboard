@@ -110,6 +110,9 @@ nav > * {
     height: 3em;
     width: 3em;
     border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #greetings {
@@ -123,6 +126,9 @@ nav > * {
 .pfp {
     height: 4em;
     width: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #buttons  {
@@ -267,7 +273,8 @@ nav > * {
     align-items: center;
 }
 
-.pfp-img {
+.pfp-img,
+#pfp > img {
     max-width: 80%;
     max-height: 80%;
 }
