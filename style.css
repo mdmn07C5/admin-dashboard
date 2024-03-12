@@ -4,7 +4,6 @@
     ---foreground-color: white;
     ---accent-color1: #1992d4;
     ---accent-color2: #f0b429;
-    ---line-height: 1.5rem;
 }
 
 * {
@@ -19,28 +18,34 @@ body {
     grid-template-rows: 1fr 4fr;
 }
 
+nav,
+#header,
+#main-content {
+    display: grid;
+    gap: 20px;
+}
+
 nav {
     grid-column: 1 / 2;
     grid-row: 1 / 5;
     background-color: var(---accent-color1);
-    display: grid;
-    gap: 20px;
     grid-template-rows: 1fr 3fr 6fr;
     font-size: 1.5em;
     color: var(---foreground-color);
 }
 
-#branding,
-li {
-    display: grid;
-    grid-template-columns: 1.5em 1fr;
-    gap: 20px;
-    align-items: center;
-}
 
+#branding,
+li, 
 nav ul {
     display: grid;
     gap: 20px
+}
+
+#branding,
+li {
+    grid-template-columns: 1.5em 1fr;
+    align-items: center;
 }
 
 li {
@@ -57,12 +62,10 @@ li > img,
 }
 
 nav > * {
-    border: dashed 2px white;
     padding-left: 20px;
 }
 
 #header {
-    display: grid;
     grid-row: 1 / 2;
     grid-column: 2 / 3;
     grid-template-columns: 2fr 1fr;
@@ -70,11 +73,6 @@ nav > * {
     padding: 10px 40px;
     gap: 10px;
     background-color: var(---foreground-color);
-    border: dashed 2px grey;
-}
-
-#header > * {
-    border: dashed 2px grey;
 }
 
 #header > #search {
@@ -150,11 +148,9 @@ nav > * {
 
 
 #main-content {
-    display: grid;
     grid-row: 2 / 5;
     background-color: var(---background-color);
     grid-template-columns: 5fr 2fr;
-    gap: 20px;
     padding: 20px 20px;
     height: auto
 }
@@ -181,14 +177,9 @@ nav > * {
     box-shadow: 2px 5px 5px 0px rgba(0, 0, 0, 0.3);
     gap: 20px;
     border-left: 10px solid var(---accent-color2);
-
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr auto;
-}
-
-.card > * {
-    border: 1px dotted red;
 }
 
 .card-content {
@@ -199,7 +190,6 @@ nav > * {
 
 
 .card-content > p {
-    border: 1px dashed purple;
     ---min-lines: 4;
     display: -webkit-box;
     -webkit-line-clamp: var(---min-lines);
@@ -221,13 +211,8 @@ nav > * {
     background-color: var(---foreground-color)
 }
 
-.card-buttons > * {
-    border: 1px dashed slateblue;
-}
-
 #right-side {
     display: grid;
-    /* flex-direction: column; */
     grid-template-rows: 1fr 1fr;
     gap:20px
 }
@@ -271,15 +256,10 @@ nav > * {
     gap: 5px;
 }
 
-.trend > * {
-    border: 1px dashed purple;
-}
-
 .trend > .pfp {
     grid-column: 1 / 2;
     grid-row: 1 / 3;
     border-radius: 50%;
-    /* text-align: center; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -293,10 +273,6 @@ nav > * {
 
 .trend > h3 {
     align-self: end;
-}
-
-#main-content > * {
-    border: dashed 2px white;
 }
 
 .filter-white {
