@@ -153,10 +153,11 @@ nav > * {
     display: grid;
     grid-row: 2 / 5;
     background-color: var(---background-color);
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 5fr 2fr;
     grid-template-rows: 1fr 1fr;
     gap: 20px;
-    padding: 40px 20px;
+    padding: 20px 20px;
+    height: auto
 }
 
 #projects {
@@ -181,7 +182,6 @@ nav > * {
     padding: 30px;
     box-shadow: 2px 5px 5px 0px rgba(0, 0, 0, 0.3);
     gap: 20px;
-    height: 250px;
     border-left: 10px solid var(---accent-color2);
 
     display: grid;
@@ -197,18 +197,16 @@ nav > * {
     grid-column: 1 / 3;
     grid-row: 1 / 2;
     overflow: hidden;
-    
 }
 
 
 .card-content > p {
     border: 1px dashed purple;
     ---min-lines: 4;
-    overflow: hidden;
     display: -webkit-box;
-    
-    -webkit-line-clamp: round(calc(200px / 1em));
+    -webkit-line-clamp: var(---min-lines);
     -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .card-buttons {
@@ -232,6 +230,14 @@ nav > * {
 #trending {
     display: flex;
     flex-direction: column;
+}
+
+#announcements-container p {
+    display: -webkit-box;
+    ---min-lines: 3;
+    -webkit-line-clamp: var(---min-lines);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 #announcements-container,

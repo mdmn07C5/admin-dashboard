@@ -103,7 +103,6 @@ function generateAnnouncements() {
 
     })
 
-    console.log(announcementsContainer.children);
 }
 
 function generateTrends() {
