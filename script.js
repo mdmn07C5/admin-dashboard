@@ -6,27 +6,6 @@ const loremIpsum = ['Voluptas est quos sed molestias. Qui quaerat tenetur et qui
     'Ut nesciunt delectus ut. Ducimus molestias eligendi officia perferendis quasi earum. Autem nostrum animi fugit consequuntur quibusdam. Vel nam inventore accusantium fuga aperiam quam non. Sed dolorem inventore nostrum quia reiciendis laudantium voluptatum.'
 ];
 
-const titles = [
-    'Super Cool Project', 
-    'Less Cool Project', 
-    'Impossible App', 'Easy Peasy App', 
-    'Ad Blocker', 
-    'Money Maker',
-];
-
-const announcements = [
-    'Site Maintenance',
-    'Community Share Day',
-    'Updated Privacy Policy',
-]
-
-
-const buttonPaths = [
-    './assets/fav.svg',
-    './assets/watch.svg',
-    './assets/fork.svg',
-]
-
 
 function twoRandomElements(arr) {
     const i = Math.floor(Math.random() * arr.length);
@@ -54,6 +33,12 @@ function createContentText(title) {
 }
 
 function createButtonRow() {
+    const buttonPaths = [
+        './assets/fav.svg',
+        './assets/watch.svg',
+        './assets/fork.svg',
+    ]
+
     const buttonRow = document.createElement('div');
     buttonRow.classList.add('card-buttons');
     buttonPaths.forEach((buttonPath) => {
@@ -70,6 +55,14 @@ function createButtonRow() {
 
 function generateProjectContent() {
     const projectsContainer = document.querySelector('#projects-container');
+
+    const titles = [
+        'Super Cool Project', 
+        'Less Cool Project', 
+        'Impossible App', 'Easy Peasy App', 
+        'Ad Blocker', 
+        'Money Maker',
+    ];
     
     titles.forEach((title) => {
         const card = document.createElement('div');
@@ -82,6 +75,12 @@ function generateProjectContent() {
 }
 
 function generateAnnouncements() {
+    const announcements = [
+        'Site Maintenance',
+        'Community Share Day',
+        'Updated Privacy Policy',
+    ]
+
     const announcementsContainer = document.querySelector('#announcements-container');
 
     announcements.forEach((announcement, index) => {
